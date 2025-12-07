@@ -42,8 +42,8 @@ public class CountryCodeConverter {
                 String line = iterator.next();
                 String[] parts = line.split("\t");
                 String countryName = parts[0];
-                String languageCode = parts[1];
-                countryCodeToCountry.put(countryName, languageCode);
+                String languageCode = parts[2].toLowerCase();
+                countryCodeToCountry.put(languageCode, countryName );
                 countryToCountryCode.put(countryName, languageCode);
             }
         }
